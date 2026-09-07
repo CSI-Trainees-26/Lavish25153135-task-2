@@ -1,0 +1,538 @@
+/* 
+   BASIC PAGE SETTINGS
+    */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f8f6;
+    color: #17202a;
+}
+
+
+/*
+   SIDEBAR
+    */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 305px;
+    height: 100vh;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #e5e5e5;
+
+    padding: 35px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-left: 15px;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo i {
+    font-size: 38px;
+    color: #39845b;
+}
+
+
+/*
+   SIDEBAR NAVIGATION
+    */
+
+.sidebar-menu {
+    margin-top: 55px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 20px;
+
+    text-decoration: none;
+
+    color: #30363b;
+
+    font-size: 19px;
+
+    border-radius: 10px;
+
+    transition: background-color 0.2s;
+}
+
+.sidebar-menu a i {
+    font-size: 25px;
+}
+
+
+/* Hover */
+
+.sidebar-menu a:hover {
+    background-color: #f1f3f1;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+
+
+/* Current page */
+
+.sidebar-menu a.active {
+    background-color: #e7f0fb;
+
+    color: #16477a;
+
+    border-left: 3px solid #287be0;
+}
+
+
+/* 
+   SIDEBAR BOTTOM
+    */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid #e5e5e5;
+
+    padding-top: 25px;
+}
+
+.sidebar-bottom a {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 20px;
+
+    color: #30363b;
+
+    text-decoration: none;
+
+    font-size: 19px;
+}
+
+.sidebar-bottom i {
+    font-size: 25px;
+}
+
+
+/* 
+   TOP HEADER
+    */
+
+.top-header {
+    position: fixed;
+
+    top: 0;
+    left: 305px;
+    right: 0;
+
+    height: 75px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0 40px;
+
+    z-index: 10;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    color: #40464c;
+
+    font-size: 17px;
+}
+
+.header-right > i {
+    font-size: 28px;
+}
+
+
+/* Profile */
+
+.profile img {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* 
+   MAIN PAGE CONTENT
+    */
+
+.page-content {
+    margin-left: 305px;
+
+    padding: 120px 55px 60px;
+}
+
+
+/* 
+   PAGE HEADING
+    */
+
+.page-heading {
+    position: relative;
+
+    margin-bottom: 35px;
+}
+
+.page-heading h1 {
+    font-size: 48px;
+
+    margin-bottom: 10px;
+}
+
+.page-heading p {
+    font-size: 23px;
+
+    color: #666d73;
+}
+
+
+/* Daily progress */
+
+.daily-progress {
+    position: absolute;
+
+    right: 10px;
+    bottom: 5px;
+
+    color: #626a70;
+
+    font-size: 17px;
+}
+
+
+/* 
+   ADD TASK BOX
+    */
+
+.add-task-box {
+    background-color: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.add-task-box input {
+    flex: 1;
+
+    padding: 17px 20px;
+
+    border: 1px solid #d8dce0;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    outline: none;
+}
+
+.add-task-box input:focus {
+    border-color: #287be0;
+}
+
+
+/* Add button */
+
+#add-task-button {
+    padding: 0 35px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #287be0;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+#add-task-button:hover {
+    background-color: #216bc2;
+}
+
+
+/* 
+   PENDING + COMPLETED CONTAINERS
+    */
+
+.task-sections {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* Both task sections */
+
+.pending-tasks,
+.completed-tasks {
+    background-color: #ffffff;
+
+    min-height: 450px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+
+/* Section heading */
+
+.pending-tasks h2,
+.completed-tasks h2 {
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* 
+   TASK LIST
+    */
+
+.pending-tasks ul,
+.completed-tasks ul {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* 
+   INDIVIDUAL TASK
+    */
+
+.task-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid #e1e4e7;
+
+    border-radius: 12px;
+
+    background-color: #ffffff;
+}
+
+
+/* Checkbox */
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* Task title */
+
+.task-title {
+    flex: 1;
+
+    font-size: 18px;
+
+    color: #20262b;
+}
+
+
+/* Completed task text */
+
+.completed-task .task-title {
+    text-decoration: line-through;
+
+    color: #777;
+}
+
+
+/* 
+   TASK BUTTONS
+    */
+
+.task-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+.task-actions button {
+    border: none;
+
+    background: none;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    color: #737a80;
+}
+
+.task-actions button:hover {
+    color: #287be0;
+}
+
+
+/* Delete button */
+
+.task-actions .delete-button:hover {
+    color: #d64545;
+}
+
+
+/* 
+   EMPTY STATE
+   */
+
+.empty-message {
+    color: #8a9095;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    margin-top: 80px;
+}
+
+
+/* 
+   RESPONSIVE DESIGN
+   */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .top-header {
+        left: 220px;
+    }
+
+    .page-content {
+        margin-left: 220px;
+
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .task-sections {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .top-header {
+        left: 0;
+    }
+
+    .page-content {
+        margin-left: 0;
+
+        padding: 105px 20px 40px;
+    }
+
+    .page-heading h1 {
+        font-size: 36px;
+    }
+
+    .page-heading p {
+        font-size: 18px;
+    }
+
+    .daily-progress {
+        position: static;
+
+        margin-top: 15px;
+    }
+
+    .add-task-box {
+        flex-direction: column;
+    }
+
+    #add-task-button {
+        padding: 15px;
+    }
+
+}

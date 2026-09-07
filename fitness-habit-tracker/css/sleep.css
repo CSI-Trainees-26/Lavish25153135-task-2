@@ -1,0 +1,766 @@
+/* =====================================================
+   1. BASIC RESET
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   2. BODY
+   ===================================================== */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f7f7f5;
+
+    color: #1d1d1f;
+
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+
+/* =====================================================
+   3. SIDEBAR
+   ===================================================== */
+
+.sidebar {
+    width: 250px;
+
+    min-height: 100vh;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #e5e5e5;
+
+    padding: 35px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 15px;
+
+    margin-bottom: 55px;
+}
+
+
+.logo i {
+    font-size: 45px;
+
+    color: #287a52;
+}
+
+
+.logo h2 {
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+
+.logo p {
+    font-size: 14px;
+
+    color: #6e6e73;
+}
+
+
+
+/* =====================================================
+   4. NAVIGATION
+   ===================================================== */
+
+.navigation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.navigation a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 14px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #2d2d2d;
+
+    font-size: 17px;
+}
+
+
+.navigation i {
+    font-size: 25px;
+
+    color: #6e6e73;
+}
+
+
+/* Hover */
+
+.navigation a:hover {
+    background-color: #f3f4f3;
+}
+
+
+/* Active page */
+
+.navigation a.active {
+    background-color: #e8f0fa;
+
+    color: #174a83;
+
+    border-left: 3px solid #2879e8;
+}
+
+
+.navigation a.active i {
+    color: #2879e8;
+}
+
+
+
+/* =====================================================
+   5. SIDEBAR BOTTOM
+   ===================================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid #e5e5e5;
+
+    padding-top: 30px;
+}
+
+
+.sidebar-bottom a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 12px 15px;
+
+    text-decoration: none;
+
+    color: #2d2d2d;
+
+    font-size: 17px;
+}
+
+
+.sidebar-bottom i {
+    font-size: 25px;
+
+    color: #6e6e73;
+}
+
+
+.sidebar-quote {
+    margin-top: 55px;
+
+    padding: 0 15px;
+
+    color: #6e6e73;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    font-style: italic;
+}
+
+
+
+/* =====================================================
+   6. MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+
+/* =====================================================
+   7. TOP HEADER
+   ===================================================== */
+
+.top-header {
+    height: 70px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    font-size: 16px;
+}
+
+
+.header-right > i {
+    font-size: 28px;
+
+    color: #6e6e73;
+}
+
+
+.profile {
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background-color: #e3e3e3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+
+/* =====================================================
+   8. PAGE CONTENT
+   ===================================================== */
+
+.page-content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 50px 40px;
+}
+
+
+
+/* Page heading */
+
+.page-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 35px;
+}
+
+
+.page-heading h1 {
+    font-size: 48px;
+
+    margin-bottom: 10px;
+}
+
+
+.page-heading p {
+    font-size: 22px;
+
+    color: #6e6e73;
+}
+
+
+.sleep-status {
+    color: #6e6e73;
+
+    font-size: 16px;
+}
+
+
+
+/* =====================================================
+   9. SLEEP INPUT BOX
+   ===================================================== */
+
+.sleep-input-box {
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.input-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.sleep-icon {
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background-color: #eef1f7;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.sleep-icon i {
+    font-size: 28px;
+
+    color: #555f78;
+}
+
+
+.input-content h2 {
+    font-size: 22px;
+
+    margin-bottom: 6px;
+}
+
+
+.input-content p {
+    color: #6e6e73;
+
+    font-size: 15px;
+}
+
+
+
+/* Sleep form */
+
+.sleep-form {
+    display: flex;
+
+    align-items: end;
+
+    gap: 15px;
+}
+
+
+.input-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.input-group label {
+    font-size: 14px;
+
+    color: #6e6e73;
+}
+
+
+#sleep-hours {
+    width: 130px;
+
+    height: 48px;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 8px;
+
+    padding: 0 15px;
+
+    font-size: 17px;
+
+    outline: none;
+}
+
+
+#sleep-hours:focus {
+    border-color: #2879e8;
+}
+
+
+#save-sleep {
+    height: 48px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2879e8;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+#save-sleep:hover {
+    background-color: #216bcf;
+}
+
+
+
+/* =====================================================
+   10. COMMON SECTION
+   ===================================================== */
+
+.today-sleep,
+.weekly-sleep {
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading h2 {
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+
+.section-heading p {
+    color: #6e6e73;
+
+    font-size: 15px;
+}
+
+
+
+/* =====================================================
+   11. TODAY'S SLEEP
+   ===================================================== */
+
+.sleep-result {
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.result-number {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+}
+
+
+.result-number strong {
+    font-size: 55px;
+}
+
+
+.result-number span {
+    color: #6e6e73;
+
+    font-size: 18px;
+}
+
+
+.sleep-message {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-left: 30px;
+
+    border-left: 1px solid #e5e5e5;
+}
+
+
+.sleep-message i {
+    font-size: 28px;
+
+    color: #287a52;
+}
+
+
+.sleep-message strong {
+    font-size: 17px;
+}
+
+
+.sleep-message p {
+    color: #6e6e73;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+}
+
+
+
+/* =====================================================
+   12. WEEKLY SLEEP GRAPH
+   ===================================================== */
+
+.weekly-average {
+    color: #6e6e73;
+
+    font-size: 15px;
+}
+
+
+/* Graph container */
+
+.sleep-chart {
+    height: 250px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-around;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #dddddd;
+
+    padding: 0 20px;
+}
+
+
+/* Individual day */
+
+.day {
+    height: 100%;
+
+    flex: 1;
+
+    max-width: 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: end;
+
+    gap: 10px;
+}
+
+
+/* Area where bar grows */
+
+.bar-container {
+    width: 100%;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: end;
+}
+
+
+/* Sleep bar */
+
+.bar {
+    width: 100%;
+
+    background-color: #6b8fbd;
+
+    border-radius: 6px 6px 0 0;
+
+    min-height: 10px;
+}
+
+
+.day span {
+    font-size: 14px;
+
+    color: #6e6e73;
+
+    padding-bottom: 10px;
+}
+
+
+
+/* =====================================================
+   13. RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 40px;
+    }
+
+
+    .sleep-input-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    /* Hide sidebar */
+
+    .sidebar {
+        display: none;
+    }
+
+
+    .page-content {
+        padding: 30px 20px;
+    }
+
+
+    .page-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 35px;
+    }
+
+
+    .page-heading p {
+        font-size: 18px;
+    }
+
+
+    .sleep-form {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    #sleep-hours {
+        width: 100%;
+    }
+
+
+    #save-sleep {
+        width: 100%;
+    }
+
+
+    .sleep-result {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+
+    .sleep-message {
+        padding-left: 0;
+
+        border-left: none;
+    }
+
+
+    .sleep-chart {
+        gap: 8px;
+
+        padding: 0 5px;
+    }
+
+}

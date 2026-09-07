@@ -1,0 +1,790 @@
+/* =====================================================
+   1. BASIC RESET
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   2. BODY
+   ===================================================== */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f7f7f5;
+
+    color: #1d1d1f;
+
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+
+/* =====================================================
+   3. SIDEBAR
+   ===================================================== */
+
+.sidebar {
+    width: 250px;
+
+    min-height: 100vh;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #e5e5e5;
+
+    padding: 35px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 15px;
+
+    margin-bottom: 55px;
+}
+
+
+.logo i {
+    font-size: 45px;
+
+    color: #287a52;
+}
+
+
+.logo h2 {
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+
+.logo p {
+    font-size: 14px;
+
+    color: #6e6e73;
+}
+
+
+
+/* =====================================================
+   4. NAVIGATION
+   ===================================================== */
+
+.navigation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.navigation a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 14px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #2d2d2d;
+
+    font-size: 17px;
+}
+
+
+.navigation i {
+    font-size: 25px;
+
+    color: #6e6e73;
+}
+
+
+/* Hover */
+
+.navigation a:hover {
+    background-color: #f3f4f3;
+}
+
+
+/* Current page */
+
+.navigation a.active {
+    background-color: #e8f0fa;
+
+    color: #174a83;
+
+    border-left: 3px solid #2879e8;
+}
+
+
+.navigation a.active i {
+    color: #2879e8;
+}
+
+
+
+/* =====================================================
+   5. SIDEBAR BOTTOM
+   ===================================================== */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid #e5e5e5;
+
+    padding-top: 30px;
+}
+
+
+.sidebar-bottom a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 12px 15px;
+
+    text-decoration: none;
+
+    color: #2d2d2d;
+
+    font-size: 17px;
+}
+
+
+.sidebar-bottom i {
+    font-size: 25px;
+
+    color: #6e6e73;
+}
+
+
+.sidebar-quote {
+    margin-top: 55px;
+
+    padding: 0 15px;
+
+    color: #6e6e73;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    font-style: italic;
+}
+
+
+
+/* =====================================================
+   6. MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+
+/* =====================================================
+   7. TOP HEADER
+   ===================================================== */
+
+.top-header {
+    height: 70px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    font-size: 16px;
+}
+
+
+.header-right > i {
+    font-size: 28px;
+
+    color: #6e6e73;
+}
+
+
+.profile {
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background-color: #e3e3e3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+
+/* =====================================================
+   8. PAGE CONTENT
+   ===================================================== */
+
+.page-content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 50px 40px;
+}
+
+
+/* Page heading */
+
+.page-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 35px;
+}
+
+
+.page-heading h1 {
+    font-size: 48px;
+
+    margin-bottom: 10px;
+}
+
+
+.page-heading p {
+    font-size: 22px;
+
+    color: #6e6e73;
+}
+
+
+.daily-status {
+    color: #6e6e73;
+
+    font-size: 16px;
+}
+
+
+
+/* =====================================================
+   9. MAIN WATER CARD
+   ===================================================== */
+
+.water-card {
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+
+/* Water heading */
+
+.water-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.water-icon {
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background-color: #eaf3fa;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.water-icon i {
+    font-size: 28px;
+
+    color: #2879e8;
+}
+
+
+.water-header h2 {
+    font-size: 24px;
+
+    text-align: left;
+
+    margin-bottom: 5px;
+}
+
+
+.water-header p {
+    color: #6e6e73;
+
+    font-size: 15px;
+
+    text-align: left;
+}
+
+
+
+/* =====================================================
+   10. WATER AMOUNT
+   ===================================================== */
+
+.water-amount {
+    margin-bottom: 25px;
+}
+
+
+.water-amount strong {
+    font-size: 65px;
+
+    font-weight: 600;
+}
+
+
+.water-amount span {
+    color: #6e6e73;
+
+    font-size: 22px;
+}
+
+
+
+/* =====================================================
+   11. PROGRESS BAR
+   ===================================================== */
+
+.progress-container {
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+}
+
+
+.progress-bar {
+    width: 100%;
+
+    height: 12px;
+
+    background-color: #e8e8e8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.progress {
+    width: 60%;
+
+    height: 100%;
+
+    background-color: #2879e8;
+
+    border-radius: 10px;
+}
+
+
+.progress-text {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    color: #6e6e73;
+}
+
+
+
+/* =====================================================
+   12. ADD WATER BUTTON
+   ===================================================== */
+
+#add-water {
+    height: 50px;
+
+    padding: 0 30px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2879e8;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+#add-water i {
+    font-size: 20px;
+
+    vertical-align: middle;
+
+    margin-right: 5px;
+}
+
+
+#add-water:hover {
+    background-color: #216bcf;
+}
+
+
+
+/* =====================================================
+   13. QUICK STATS
+   ===================================================== */
+
+.water-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.stat-box {
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.stat-box > i {
+    font-size: 30px;
+
+    color: #2879e8;
+}
+
+
+.stat-box div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.stat-box span {
+    color: #6e6e73;
+
+    font-size: 14px;
+}
+
+
+.stat-box strong {
+    font-size: 20px;
+}
+
+
+
+/* =====================================================
+   14. WEEKLY WATER
+   ===================================================== */
+
+.weekly-water {
+    background-color: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading h2 {
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+
+.section-heading p {
+    color: #6e6e73;
+
+    font-size: 15px;
+}
+
+
+.weekly-average {
+    color: #6e6e73;
+
+    font-size: 15px;
+}
+
+
+
+/* =====================================================
+   15. WATER GRAPH
+   ===================================================== */
+
+.water-chart {
+    height: 250px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-around;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #dddddd;
+
+    padding: 0 20px;
+}
+
+
+.day {
+    height: 100%;
+
+    flex: 1;
+
+    max-width: 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: end;
+
+    gap: 10px;
+}
+
+
+.bar-container {
+    width: 100%;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: end;
+}
+
+
+.bar {
+    width: 100%;
+
+    min-height: 10px;
+
+    background-color: #6b9fd1;
+
+    border-radius: 6px 6px 0 0;
+}
+
+
+.day span {
+    font-size: 14px;
+
+    color: #6e6e73;
+
+    padding-bottom: 10px;
+}
+
+
+
+/* =====================================================
+   16. WATER TIP
+   ===================================================== */
+
+.water-tip {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 5px;
+
+    color: #6e6e73;
+
+    font-size: 14px;
+}
+
+
+.water-tip i {
+    font-size: 20px;
+}
+
+
+
+/* =====================================================
+   17. RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 40px;
+    }
+
+
+    .water-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    /* Hide sidebar */
+
+    .sidebar {
+        display: none;
+    }
+
+
+    .page-content {
+        padding: 30px 20px;
+    }
+
+
+    .page-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 35px;
+    }
+
+
+    .page-heading p {
+        font-size: 18px;
+    }
+
+
+    .water-card {
+        padding: 25px 20px;
+    }
+
+
+    .water-amount strong {
+        font-size: 50px;
+    }
+
+
+    .water-chart {
+        gap: 8px;
+
+        padding: 0 5px;
+    }
+
+
+    .water-tip {
+        align-items: flex-start;
+    }
+
+}
