@@ -1,6 +1,6 @@
-/* =========================================
+/* 
    GET ELEMENTS FROM HTML
-   ========================================= */
+    */
 
 // Input where the user types a task
 const taskInput = document.getElementById("new-task-input");
@@ -18,21 +18,19 @@ const completedTaskList = document.getElementById("completed-task-list");
 const dailyProgress = document.getElementById("daily-progress");
 
 
-/* =========================================
+/* 
    TASK DATA
-   ========================================= */
+    */
 
 // Get saved tasks from LocalStorage.
-//
-// If there are no saved tasks,
-// start with an empty array.
+
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 
-/* =========================================
+/* 
    SAVE TASKS
-   ========================================= */
+    */
 
 function saveTasks() {
 
@@ -43,9 +41,9 @@ function saveTasks() {
 }
 
 
-/* =========================================
+/* 
    DISPLAY ALL TASKS
-   ========================================= */
+    */
 
 function displayTasks() {
 
@@ -147,9 +145,9 @@ function displayTasks() {
         });
 
 
-        // ---------------------------------
+        
         // DELETE BUTTON
-        // ---------------------------------
+        
 
         const deleteButton = document.createElement("button");
 
@@ -181,18 +179,17 @@ function displayTasks() {
         });
 
 
-        // ---------------------------------
+        
         // PUT BUTTONS TOGETHER
-        // ---------------------------------
-
+        
         taskActions.appendChild(editButton);
 
         taskActions.appendChild(deleteButton);
 
 
-        // ---------------------------------
+        
         // PUT EVERYTHING INSIDE <li>
-        // ---------------------------------
+        
 
         listItem.appendChild(checkbox);
 
@@ -201,9 +198,9 @@ function displayTasks() {
         listItem.appendChild(taskActions);
 
 
-        // ---------------------------------
+        
         // ADD TASK TO CORRECT SECTION
-        // ---------------------------------
+        
 
         if (task.completed === false) {
 
@@ -226,9 +223,9 @@ function displayTasks() {
 }
 
 
-/* =========================================
+/* 
    ADD NEW TASK
-   ========================================= */
+    */
 
 function addTask() {
 
@@ -290,9 +287,9 @@ addTaskButton.addEventListener("click", function() {
 });
 
 
-/* =========================================
+/* 
    PRESS ENTER TO ADD TASK
-   ========================================= */
+    */
 
 taskInput.addEventListener("keydown", function(event) {
 
@@ -305,9 +302,9 @@ taskInput.addEventListener("keydown", function(event) {
 });
 
 
-/* =========================================
+/* 
    UPDATE TASK COUNTS
-   ========================================= */
+   */
 
 function updateTaskCounts() {
 
@@ -350,8 +347,8 @@ function updateTaskCounts() {
 }
 
 
-/* =========================================
+/* 
    LOAD TASKS WHEN PAGE OPENS
-   ========================================= */
+    */
 
 displayTasks();

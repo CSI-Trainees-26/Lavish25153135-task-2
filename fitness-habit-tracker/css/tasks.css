@@ -21,21 +21,31 @@ body {
 
 .sidebar {
     position: fixed;
-    left: 0;
-    top: 0;
 
-    width: 305px;
-    height: 100vh;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
 
-    background-color: #ffffff;
+    width: 240px;
 
-    border-right: 1px solid #e5e5e5;
+    background: linear-gradient(
+        180deg,
+        #5d56c9,
+        #5149b8
+    );
 
-    padding: 35px 20px;
+    border-radius: 22px;
+
+    padding: 30px 14px;
+
+    color: white;
 
     display: flex;
     flex-direction: column;
+
+    box-shadow: 0 12px 30px rgba(50, 45, 120, 0.15);
 }
+
 
 
 /* Logo */
