@@ -41,7 +41,7 @@ function saveTasks() {
 }
 
 
-/* 
+  /* 
    DISPLAY ALL TASKS
     */
 
@@ -63,10 +63,9 @@ function displayTasks() {
         listItem.classList.add("task-item");
 
 
-        // ---------------------------------
+        
         // CREATE CHECKBOX
-        // ---------------------------------
-
+        
         const checkbox = document.createElement("input");
 
         checkbox.type = "checkbox";
@@ -91,9 +90,9 @@ function displayTasks() {
         });
 
 
-        // ---------------------------------
+       
         // CREATE TASK TEXT
-        // ---------------------------------
+        
 
         const taskTitle = document.createElement("span");
 
@@ -102,18 +101,18 @@ function displayTasks() {
         taskTitle.classList.add("task-title");
 
 
-        // ---------------------------------
+        
         // CREATE BUTTON CONTAINER
-        // ---------------------------------
+        
 
         const taskActions = document.createElement("div");
 
         taskActions.classList.add("task-actions");
 
 
-        // ---------------------------------
+        
         // EDIT BUTTON
-        // ---------------------------------
+        
 
         const editButton = document.createElement("button");
 
@@ -276,9 +275,9 @@ function addTask() {
 }
 
 
-/* =========================================
+/* 
    ADD TASK BUTTON
-   ========================================= */
+    */
 
 addTaskButton.addEventListener("click", function() {
 
@@ -287,7 +286,7 @@ addTaskButton.addEventListener("click", function() {
 });
 
 
-/* 
+  /* 
    PRESS ENTER TO ADD TASK
     */
 
@@ -302,7 +301,7 @@ taskInput.addEventListener("keydown", function(event) {
 });
 
 
-/* 
+  /* 
    UPDATE TASK COUNTS
    */
 

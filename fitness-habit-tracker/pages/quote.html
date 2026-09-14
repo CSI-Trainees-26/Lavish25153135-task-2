@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    >
+
+    
+    <link rel="stylesheet" href="../css/quote.css">
+
+    <title>FitTrack - Motivation</title>
+</head>
+
+<body>
+
+
+    <!--SIDEBAR  -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <i class='bx bxs-leaf'></i>
+
+            <div>
+                <h2>FitTrack</h2>
+                <p>Small steps, better you.</p>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="navigation">
+
+            <a href="../index.html">
+                <i class='bx bx-home'></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="tasks.html">
+                <i class='bx bx-task'></i>
+                <span>Tasks</span>
+            </a>
+
+            <a href="habits.html">
+                <i class='bx bx-target-lock'></i>
+                <span>Habits</span>
+            </a>
+
+            <a href="water.html">
+                <i class='bx bx-droplet'></i>
+                <span>Water</span>
+            </a>
+
+            <a href="sleep.html">
+                <i class='bx bx-moon'></i>
+                <span>Sleep</span>
+            </a>
+
+            <!-- Current page -->
+
+            <a href="quotes.html" class="active">
+                <i class='bx bx-quote-alt-left'></i>
+                <span>Motivation</span>
+            </a>
+
+            <a href="pomodoro.html">
+                <i class='bx bx-timer'></i>
+                <span>Pomodoro</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar bottom -->
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html">
+                <i class='bx bx-cog'></i>
+                <span>Settings</span>
+            </a>
+
+            <p>
+                "A better you,<br>
+                one day at a time."
+            </p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!--  MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- Header -->
+
+        <header class="top-header">
+
+            <div></div>
+
+            <div class="header-right">
+
+                <span>Thu, 5 Sep 2026</span>
+
+                <i class='bx bx-sun'></i>
+
+                <div class="profile">
+                    L
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        
+        <section class="page-content">
+
+
+            <!-- Page heading -->
+
+            <div class="page-heading">
+
+                <span class="small-heading">
+                    MOTIVATION
+                </span>
+
+                <h1>
+                    Daily Motivation
+                </h1>
+
+                <p>
+                    A new perspective, every time you need it.
+                </p>
+
+            </div>
+
+
+
+            <!--MAIN QUOTE SECTION -->
+
+            <div class="motivation-layout">
+
+
+                <!-- Quote Card -->
+
+                <section class="quote-card">
+
+
+                    <div class="quote-mark">
+                        “
+                    </div>
+
+
+                    <div class="quote-number">
+                        1
+                    </div>
+
+
+                    <div class="quote-content">
+
+                        <p id="quoteText">
+                            Discipline beats motivation
+                            when motivation disappears.
+                        </p>
+
+                        <span id="quoteAuthor">
+                            — Unknown
+                        </span>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="quote-actions">
+
+                        <button
+                            id="newQuote"
+                            class="primary-button"
+                        >
+
+                            <i class='bx bx-refresh'></i>
+
+                            New Quote
+
+                        </button>
+
+
+                        <button
+                            id="saveQuote"
+                            class="secondary-button"
+                        >
+
+                            <i class='bx bx-heart'></i>
+
+                            Save
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- Mood Card -->
+
+                <section class="mood-card">
+
+                    <h2>
+                        Your Mood Today
+                    </h2>
+
+                    <p class="mood-subtitle">
+                        How are you feeling right now?
+                    </p>
+
+
+                    <div class="mood-grid">
+
+
+                        <button class="mood good">
+
+                            <i class='bx bx-smile'></i>
+
+                            <span>
+                                Great
+                            </span>
+
+                        </button>
+
+
+                        <button class="mood okay">
+
+                            <i class='bx bx-happy'></i>
+
+                            <span>
+                                Good
+                            </span>
+
+                        </button>
+
+
+                        <button class="mood neutral">
+
+                            <i class='bx bx-meh'></i>
+
+                            <span>
+                                Okay
+                            </span>
+
+                        </button>
+
+
+                        <button class="mood bad">
+
+                            <i class='bx bx-sad'></i>
+
+                            <span>
+                                Not great
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="mood-message">
+
+                        Whatever today looks like,
+                        you're still making progress.
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!--  Saved quotes-->
+
+            <section class="saved-section">
+
+
+                <div class="section-heading">
+
+                    <h2>
+                        Saved Quotes
+                    </h2>
+
+                    <button id="clearQuotes">
+                        Clear all
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="savedQuotes"
+                    class="saved-quotes"
+                >
+
+                    <!-- Saved quotes will appear here -->
+
+                    <div class="empty-state">
+
+                        <i class='bx bx-heart'></i>
+
+                        <p>
+                            No saved quotes yet.
+                        </p>
+
+                        <span>
+                            Save a quote you want to remember.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+           
+
+            <section class="motivation-tip">
+
+                <div class="tip-icon">
+
+                    <i class='bx bx-bulb'></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Need a little more motivation?
+                    </h3>
+
+                    <p>
+                        Click "New Quote" and discover
+                        a fresh perspective.
+                    </p>
+
+                </div>
+
+                <span>
+                    You got this!
+                </span>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+
+    
+
+    <script src="../js/quotes.js"></script>
+
+</body>
+
+</html>

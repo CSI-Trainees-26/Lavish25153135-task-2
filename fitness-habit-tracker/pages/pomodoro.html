@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pomodoro - HabitFlow</title>
+
+    
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/pomodoro.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class='bx bx-leaf'></i>
+                </div>
+
+                <div>
+                    <h2>HabitFlow</h2>
+                    <p>Small steps, better you.</p>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <a href="dashboard.html" class="nav-item">
+                    <i class='bx bx-home-alt'></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="tasks.html" class="nav-item">
+                    <i class='bx bx-task'></i>
+                    <span>Tasks</span>
+                </a>
+
+                <a href="habits.html" class="nav-item">
+                    <i class='bx bx-check-circle'></i>
+                    <span>Habits</span>
+                </a>
+
+                <a href="water.html" class="nav-item">
+                    <i class='bx bx-droplet'></i>
+                    <span>Water</span>
+                </a>
+
+                <a href="sleep.html" class="nav-item">
+                    <i class='bx bx-moon'></i>
+                    <span>Sleep</span>
+                </a>
+
+                <a href="quotes.html" class="nav-item">
+                    <i class='bx bx-quote-alt-left'></i>
+                    <span>Motivation</span>
+                </a>
+
+                <a href="pomodoro.html" class="nav-item active">
+                    <i class='bx bx-timer'></i>
+                    <span>Pomodoro</span>
+                </a>
+
+                <a href="settings.html" class="nav-item">
+                    <i class='bx bx-cog'></i>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Better habits.</p>
+                <p>A better you.</p>
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="top-header">
+
+                <div class="header-date">
+                    <span id="currentDate"></span>
+                    <i class='bx bx-sun'></i>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">L</div>
+                </div>
+
+            </header>
+
+
+            <!-- Page heading -->
+            <section class="page-heading">
+
+                <div>
+                    <span class="section-label">FOCUS</span>
+
+                    <h1>Pomodoro</h1>
+
+                    <p>
+                        Focus in short sessions. Take intentional breaks.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- ================= TIMER ================= -->
+            <section class="pomodoro-container">
+
+                <div class="timer-card">
+
+                    <!-- Mode selector -->
+                    <div class="mode-selector">
+
+                        <button
+                            class="mode-btn active"
+                            data-mode="focus">
+                            Focus
+                        </button>
+
+                        <button
+                            class="mode-btn"
+                            data-mode="short">
+                            Short Break
+                        </button>
+
+                        <button
+                            class="mode-btn"
+                            data-mode="long">
+                            Long Break
+                        </button>
+
+                    </div>
+
+
+                    <!-- Timer -->
+                    <div class="timer-section">
+
+                        <span id="timerLabel">Focus</span>
+
+                        <div id="timer">
+                            25:00
+                        </div>
+
+                        <p id="timerStatus">
+                            Ready when you are.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Controls -->
+                    <div class="timer-controls">
+
+                        <button
+                            id="startBtn"
+                            class="primary-btn">
+
+                            <i class='bx bx-play'></i>
+                            Start Session
+
+                        </button>
+
+                        <button
+                            id="resetBtn"
+                            class="secondary-btn">
+
+                            <i class='bx bx-reset'></i>
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SIDE INFO  -->
+                <div class="side-section">
+
+                    <!-- Current task -->
+                    <div class="info-card">
+
+                        <h2>Working on</h2>
+
+                        <p class="card-description">
+                            What are you focusing on?
+                        </p>
+
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="e.g. Study Data Structures">
+
+                    </div>
+
+
+                    <!-- Session progress -->
+                    <div class="info-card">
+
+                        <h2>Today's sessions</h2>
+
+                        <div class="session-dots" id="sessionDots">
+
+                            <span class="session-dot completed"></span>
+                            <span class="session-dot completed"></span>
+                            <span class="session-dot"></span>
+                            <span class="session-dot"></span>
+
+                        </div>
+
+                        <p id="sessionCount">
+                            2 of 4 sessions completed
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SETTINGS ================= -->
+            <section class="settings-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Timer Settings</h2>
+                        <p>Adjust your session durations.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+                    <div class="setting-item">
+
+                        <label for="focusDuration">
+                            Focus
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="focusDuration"
+                                value="25"
+                                min="1"
+                                max="60">
+
+                            <span>min</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-item">
+
+                        <label for="shortDuration">
+                            Short Break
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="shortDuration"
+                                value="5"
+                                min="1"
+                                max="30">
+
+                            <span>min</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-item">
+
+                        <label for="longDuration">
+                            Long Break
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="longDuration"
+                                value="15"
+                                min="1"
+                                max="60">
+
+                            <span>min</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="pomodoro.js"></script>
+
+</body>
+</html>

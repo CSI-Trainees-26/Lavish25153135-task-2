@@ -1,0 +1,1074 @@
+/* 
+   RESET
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    background: #f5f5f7;
+
+    color: #15172b;
+
+    min-height: 100vh;
+}
+
+
+
+/* 
+   SIDEBAR
+ */
+
+.sidebar {
+
+    position: fixed;
+
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+
+    width: 240px;
+
+    background: linear-gradient(
+        180deg,
+        #5d56c9,
+        #5149b8
+    );
+
+    border-radius: 22px;
+
+    padding: 30px 14px;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 12px 30px rgba(50, 45, 120, 0.15);
+}
+
+
+
+/* Logo */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 16px 28px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.18);
+}
+
+
+.logo > i {
+    font-size: 32px;
+}
+
+
+.logo h2 {
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+.logo p {
+
+    font-size: 11px;
+
+    opacity: 0.75;
+
+    margin-top: 2px;
+}
+
+
+
+/* Navigation */
+
+.navigation {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.navigation a,
+.sidebar-bottom a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 16px;
+
+    color: rgba(255,255,255,0.85);
+
+    text-decoration: none;
+
+    border-radius: 13px;
+
+    font-size: 15px;
+
+    transition: 0.2s ease;
+}
+
+
+.navigation a i,
+.sidebar-bottom a i {
+
+    font-size: 22px;
+}
+
+
+.navigation a:hover,
+.sidebar-bottom a:hover {
+
+    background:
+        rgba(255,255,255,0.10);
+}
+
+
+.navigation a.active {
+
+    background:
+        rgba(255,255,255,0.18);
+
+    color: white;
+}
+
+
+
+/* Sidebar bottom */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+}
+
+
+.sidebar-bottom a {
+
+    margin-bottom: 25px;
+}
+
+
+.sidebar-bottom p {
+
+    border-top:
+        1px solid rgba(255,255,255,0.18);
+
+    padding: 25px 16px 0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    opacity: 0.75;
+}
+
+
+
+
+
+.main-content {
+
+    margin-left: 280px;
+
+    padding:
+        0 35px 40px;
+
+    min-height: 100vh;
+}
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+.top-header {
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    color: #69708b;
+
+    font-size: 14px;
+}
+
+
+.header-right i {
+
+    font-size: 21px;
+}
+
+
+.profile {
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #e4e3f2;
+
+    color: #4e48ae;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 600;
+}
+
+
+
+/* 
+   PAGE
+*/
+
+.page-content {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+.page-heading {
+
+    margin-bottom: 28px;
+}
+
+
+.small-heading {
+
+    color: #777596;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: 500;
+}
+
+
+.page-heading h1 {
+
+    font-size: 44px;
+
+    line-height: 1.1;
+
+    margin-top: 7px;
+
+    font-weight: 650;
+
+    letter-spacing: -1.5px;
+}
+
+
+.page-heading p {
+
+    color: #777d98;
+
+    font-size: 19px;
+
+    margin-top: 7px;
+}
+
+
+
+
+
+.motivation-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1.7fr 0.8fr;
+
+    gap: 20px;
+}
+
+
+
+
+.quote-card {
+
+    position: relative;
+
+    min-height: 375px;
+
+    padding: 48px;
+
+    border-radius: 20px;
+
+    border: 1px solid #dedcf2;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1efff,
+            #f8f7ff
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+
+
+
+.quote-mark {
+
+    position: absolute;
+
+    left: 30px;
+    top: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 14px;
+
+    background: #e4e0ff;
+
+    color: #5d56c9;
+
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    line-height: 70px;
+}
+
+
+
+/* Quote number */
+
+.quote-number {
+
+    position: absolute;
+
+    top: 28px;
+    right: 28px;
+
+    color: #73768c;
+
+    font-size: 13px;
+}
+
+
+
+/* Quote content */
+
+.quote-content {
+
+    max-width: 700px;
+}
+
+
+.quote-content p {
+
+    font-family: Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 35px;
+
+    line-height: 1.3;
+
+    color: #15152b;
+}
+
+
+.quote-content span {
+
+    display: block;
+
+    margin-top: 18px;
+
+    color: #74788e;
+
+    font-size: 16px;
+}
+
+
+ /* QUOTE BUTTONS */
+
+.quote-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+.quote-actions button {
+
+    height: 52px;
+
+    padding: 0 28px;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.quote-actions i {
+
+    font-size: 20px;
+}
+
+
+
+/* Primary */
+
+.primary-button {
+
+    border: none;
+
+    background: #5b4bc4;
+
+    color: white;
+
+    box-shadow:
+        0 5px 12px rgba(91,75,196,0.18);
+}
+
+
+.primary-button:hover {
+
+    background: #4f40b3;
+}
+
+
+.primary-button:active {
+
+    transform: scale(0.97);
+}
+
+
+
+/* Secondary */
+
+.secondary-button {
+
+    background: white;
+
+    border: 1px solid #d7d5e3;
+
+    color: #202238;
+}
+
+
+.secondary-button:hover {
+
+    background: #f5f4fa;
+}
+
+
+.secondary-button.saved {
+
+    color: #e65368;
+
+    border-color: #f0c8cf;
+}
+
+
+
+/* 
+   MOOD CARD
+ */
+
+.mood-card {
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e3e3e9;
+
+    background: white;
+}
+
+
+.mood-card h2 {
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+.mood-subtitle {
+
+    color: #777d98;
+
+    font-size: 14px;
+
+    margin-top: 6px;
+}
+
+
+
+/* Mood grid */
+
+.mood-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.mood {
+
+    min-height: 76px;
+
+    border: 1px solid #e6e6eb;
+
+    border-radius: 13px;
+
+    background: #fafafa;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    color: #25263a;
+
+    transition: 0.2s ease;
+}
+
+
+.mood i {
+
+    font-size: 27px;
+}
+
+
+.mood:hover {
+
+    transform: translateY(-1px);
+}
+
+
+.mood.selected {
+
+    border-color: #7669dc;
+
+    box-shadow:
+        0 0 0 2px rgba(118,105,220,0.12);
+}
+
+
+
+/* Mood colors */
+
+.mood.good {
+
+    background: #eefaf2;
+
+    color: #22a35a;
+}
+
+
+.mood.okay {
+
+    background: #f0f3ff;
+
+    color: #557be1;
+}
+
+
+.mood.neutral {
+
+    background: #fff9e9;
+
+    color: #d99a15;
+}
+
+
+.mood.bad {
+
+    background: #fff0f1;
+
+    color: #df5964;
+}
+
+
+
+/* Mood message */
+
+.mood-message {
+
+    border-top:
+        1px solid #eeeeF2;
+
+    margin-top: 22px;
+
+    padding-top: 20px;
+
+    color: #73788c;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+
+/* 
+   SAVED QUOTES
+ */
+
+.saved-section {
+
+    margin-top: 20px;
+
+    background: white;
+
+    border: 1px solid #e3e3e9;
+
+    border-radius: 20px;
+
+    padding: 25px;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.section-heading h2 {
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+.section-heading button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #554bc0;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+
+/* Saved quotes */
+
+.saved-quotes {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+
+.saved-quote {
+
+    position: relative;
+
+    min-height: 125px;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    border: 1px solid #e6e6eb;
+
+    background: #fafafa;
+}
+
+
+.saved-quote p {
+
+    font-family: Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    padding-right: 20px;
+}
+
+
+.saved-quote span {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: #777d98;
+
+    font-size: 13px;
+}
+
+
+.remove-quote {
+
+    position: absolute;
+
+    right: 15px;
+    top: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #e65368;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+
+/* Empty state */
+
+.empty-state {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777d98;
+}
+
+
+.empty-state i {
+
+    font-size: 30px;
+
+    color: #aaa9ba;
+}
+
+
+.empty-state p {
+
+    margin-top: 8px;
+
+    font-size: 15px;
+}
+
+
+.empty-state span {
+
+    font-size: 13px;
+}
+
+
+
+
+
+.motivation-tip {
+
+    margin-top: 20px;
+
+    padding: 20px 25px;
+
+    border-radius: 18px;
+
+    background: #f1efff;
+
+    border: 1px solid #e3defc;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.tip-icon {
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e3defc;
+
+    color: #5c50c7;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.motivation-tip h3 {
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+.motivation-tip p {
+
+    margin-top: 4px;
+
+    color: #73778d;
+
+    font-size: 14px;
+}
+
+
+.motivation-tip > span {
+
+    margin-left: auto;
+
+    color: #554bc0;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+
+        width: 200px;
+    }
+
+    .main-content {
+
+        margin-left: 235px;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+    .motivation-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+    .saved-quotes {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+
+        position: relative;
+
+        left: 0;
+        top: 0;
+        bottom: auto;
+
+        width: calc(100% - 30px);
+
+        margin: 15px;
+    }
+
+
+    .navigation {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .sidebar-bottom {
+
+        display: none;
+    }
+
+
+    .main-content {
+
+        margin-left: 0;
+
+        padding:
+            0 15px 30px;
+    }
+
+
+    .top-header {
+
+        height: 70px;
+    }
+
+
+    .header-right span {
+
+        display: none;
+    }
+
+
+    .page-heading h1 {
+
+        font-size: 36px;
+    }
+
+
+    .quote-card {
+
+        min-height: 350px;
+
+        padding: 30px 20px;
+    }
+
+
+    .quote-content p {
+
+        font-size: 27px;
+    }
+
+
+    .quote-actions {
+
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .quote-actions button {
+
+        width: 100%;
+    }
+
+
+    .saved-quotes {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .motivation-tip {
+
+        align-items: flex-start;
+    }
+
+
+    .motivation-tip > span {
+
+        display: none;
+    }
+
+}
